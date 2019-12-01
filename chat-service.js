@@ -32,17 +32,9 @@ exports.add_message = (req, res) => {
     }
     let data = fs.readFileSync(FILE_NAME);
     let messages = JSON.parse(data);
-    let username = req.body.id;
-    let message = req.body.title;
-    let obj = messages.find((element) => {
-        return element.username == username;
-    })
-    if (!obj) {
-        return res.status(404).send({
-            success: false,
-            message: 'user not found :('
-        });
-    }
+    let username = req.body.username;
+    let message = req.body.message;
+    
     
     let timestamp=Date.now();
     let id=messages.length;
