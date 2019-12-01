@@ -4,7 +4,7 @@ var bodyParser=require('body-parser');
 
 const PORT=4001;
 
-var todo=require('./todo');
+var messages=require('./chat-service');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -26,13 +26,13 @@ app.use((req,res,next)=>{
 
 var router=express.Router();    
 
-router.get('/',todo.hello_world);
+router.get('/',messages.hello_world);
 
-router.get('/todo',todo.list_all_todo);
+router.get('/message',messages.get_all_messages);
 
-router.post('/todo',todo.get_todo);
-router.put('/todo',todo.add_todo);
-router.delete('/todo',todo.delete_todo);
+router.post('/message',messages.get_message);
+router.put('/message',messages.add_message);
+router.delete('/message',messages.delete_message);
 
 
 // router.get('/pizzas',(req,res)=>{  });
