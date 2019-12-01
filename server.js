@@ -41,5 +41,5 @@ router.delete('/todo',todo.delete_todo);
 app.use('/api',router);
 
 app.listen(process.env.PORT || PORT,()=>{
-    console.log(`Server started on port ${PORT}`);
+    console.log(`Server started on port ${PORT} or ${process.env.PORT}`);
 })
