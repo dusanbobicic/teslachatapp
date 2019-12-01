@@ -40,6 +40,6 @@ router.delete('/todo',todo.delete_todo);
 
 app.use('/api',router);
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log(`Server started on port ${PORT}`);
 })
