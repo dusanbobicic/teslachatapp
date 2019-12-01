@@ -44,7 +44,7 @@ exports.add_message = (req, res) => {
     fs.writeFile(FILE_NAME, JSON.stringify(messages), 'utf8',()=>{
         console.log('It Works!');
     });
-    console.log(`User ${obj} updates`);
+    console.log(`User ${username} updates`);
     res.status(200).send({
         success: true,
         message: 'Message added Succesfully'
