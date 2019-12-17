@@ -1,0 +1,35 @@
+[
+    {
+        "id": 0,
+        "data": "Automobil"
+    },
+    {
+        "id": 1,
+        "data": "Bager"
+    },
+    {
+        "id": 2,
+        "data": "Brod"
+    },
+    {
+        "id": 3,
+        "data": "Avion"
+    },
+    {
+        "id": 4,
+        "data": "Elektricni trotinet"
+    },
+    {
+        "id": 5,
+        "data": "Biciklo"
+    }
+    ,
+    {
+        "id":6,
+        "data": "Kamion"
+    },
+    {
+        "id": 7,
+        "data": "Biciklo"
+    }
+]

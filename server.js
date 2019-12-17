@@ -40,14 +40,20 @@ router.delete('/message',messages.delete_message);
 router.get('/gamer/scores',gamer.scores);
 
 router.get('/gamer/scores/:userId',gamer.get_score);
+router.put('/gamer/scores',gamer.add_score);
+
+
 router.put('/gamer/users',gamer.register);
 router.get('/gamer/users/:userId',gamer.getUserInfo);
 router.post('/gamer/users',gamer.logIn);
+router.get('/gamer/users',gamer.getUsers);
+
+router.get('/gamer/memory/cards',gamer.getCards);
 
 // router.get('/pizzas',(req,res)=>{  });
 
 
 app.use('/api',router);
-app.listen(process.env.PORT || PORT,'91.187.157.240',()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log(`Server started on port ${PORT} or ${process.env.PORT}`);
 })
