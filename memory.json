@@ -1,35 +1,35 @@
 [
     {
         "id": 0,
-        "data": "Automobil"
+        "data": "🐶"
     },
     {
         "id": 1,
-        "data": "Bager"
+        "data": "🐱"
     },
     {
         "id": 2,
-        "data": "Brod"
+        "data": "🐭"
     },
     {
         "id": 3,
-        "data": "Avion"
+        "data": "🐹"
     },
     {
         "id": 4,
-        "data": "Elektricni trotinet"
+        "data": "🐰"
     },
     {
         "id": 5,
-        "data": "Biciklo"
+        "data": "🦊"
     }
     ,
     {
         "id":6,
-        "data": "Kamion"
+        "data": "🐻"
     },
     {
         "id": 7,
-        "data": "Biciklo"
+        "data": "🐼"
     }
 ]
