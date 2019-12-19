@@ -1,1 +1,20 @@
-[{"user_id":"ABC","name":"abc","surname":"abc","username":"abc","email":"mail","picture":null,"password":"aaaa"},{"user_id":"2fd5023a-c82e-48e9-9c35-844c05e975a1","name":"pera","surname":"peric","email":"bzv","picture":null,"username":"jole","password":"sifra"}]
+[
+    {
+        "user_id": "ABC",
+        "name": "abc",
+        "surname": "abc",
+        "username": "abc",
+        "email": "mail",
+        "picture": null,
+        "password": "aaaa"
+    },
+    {
+        "user_id": "2fd5023a-c82e-48e9-9c35-844c05e975a1",
+        "name": "pera",
+        "surname": "peric",
+        "email": "a@a.a",
+        "picture": null,
+        "username": "jole",
+        "password": "sifra1234"
+    }
+]
