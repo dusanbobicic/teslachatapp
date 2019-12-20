@@ -5,7 +5,7 @@
         "surname": "abc",
         "username": "abc",
         "email": "mail",
-        "picture": null,
+        "picture": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg",
         "password": "aaaa"
     },
     {
@@ -13,7 +13,7 @@
         "name": "pera",
         "surname": "peric",
         "email": "a@a.a",
-        "picture": null,
+        "picture": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg",
         "username": "jole",
         "password": "sifra1234"
     },
@@ -22,7 +22,7 @@
         "name": "pera",
         "surname": "peric",
         "email": "a@a.a",
-        "picture": null,
+        "picture": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg",
         "username": "Cvijane kidas!",
         "password": "sifra1234"
     }
