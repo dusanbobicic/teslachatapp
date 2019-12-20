@@ -16,5 +16,14 @@
         "picture": null,
         "username": "jole",
         "password": "sifra1234"
+    },
+    {
+        "user_id": "dfg",
+        "name": "pera",
+        "surname": "peric",
+        "email": "a@a.a",
+        "picture": null,
+        "username": "Cvijane kidas!",
+        "password": "sifra1234"
     }
 ]
