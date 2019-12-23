@@ -7,6 +7,7 @@ const PORT=4001;
 
 var messages=require('./chat-service');
 var gamer= require('./gamer-service');
+var forum=require('./forum-service');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -31,11 +32,12 @@ var router=express.Router();
 router.get('/',messages.hello_world);
 
 router.get('/message',messages.get_all_messages);
-
 router.post('/message',messages.get_message);
 router.put('/message',messages.add_message);
 router.delete('/message',messages.delete_message);
 
+
+//-----------------------------
 
 router.get('/gamer/scores',gamer.scores);
 
@@ -50,7 +52,24 @@ router.get('/gamer/users',gamer.getUsers);
 
 router.get('/gamer/memory/cards',gamer.getCards);
 
-// router.get('/pizzas',(req,res)=>{  });
+
+
+//-----------------------------------------------------
+
+
+router.put('/forum/users',forum.register);
+router.get('/forum/users/:userId',forum.getUserInfo);
+router.post('/forum/users',forum.logIn);
+router.get('/forum/users',forum.getUsers);
+
+
+router.get('/forum/message',forum.get_all_messages);
+router.get('/forum/message/:topic_id',forum.get_message);
+router.put('/forum/message',forum.add_message);
+
+router.get('/forum/topics',forum.get_all_topics);
+router.put('/forum/topics',forum.add_topic);
+
 
 
 app.use('/api',router);
