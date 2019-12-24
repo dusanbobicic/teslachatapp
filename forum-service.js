@@ -105,15 +105,21 @@ exports.add_topic = (req, res) => {
             message: 'Title is required'
         });
     }
+    if(!req.body.user_id){
+        return res.status(400).send({
+            success:false,
+            message:'User is required!'
+        })
+    }
     
     let data = fs.readFileSync(TOPICS_FILE_NAME);
     let messages = JSON.parse(data);
 
-    
+    let user_id=req.body.user_id;
     let timestamp=Date.now();
     let title=req.body.title;
     let id=uuidv4();
-    messages.push({topic_id:id,title:title,timestamp:timestamp})
+    messages.push({topic_id:id,user_id:user_id,title:title,timestamp:timestamp})
     //todos[obj].items.push(title);
     //console.log(todos);
     fs.writeFile(TOPICS_FILE_NAME, JSON.stringify(messages), 'utf8',()=>{
