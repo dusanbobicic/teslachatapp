@@ -128,7 +128,8 @@ exports.add_topic = (req, res) => {
     console.log(`Topic added`);
     res.status(200).send({
         success: true,
-        message: 'Topic added Succesfully'
+        message: 'Topic added Succesfully',
+        topic:{title,topic_id:id,timestamp,user_id}
 
     });
 }
