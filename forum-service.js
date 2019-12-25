@@ -43,7 +43,7 @@ exports.add_message = (req, res) => {
     let username = req.body.username;
     let message = req.body.message;
     let topic_id=req.body.topic_id;
-    let user_id=users.find(x=>x.username==username);
+    let user_id=users.find(x=>x.username==username).user_id;
     let timestamp=Date.now();
     let id=uuidv4();
     let obj={message_id:id,user_id:user_id,username:username,topic_id:topic_id,message:message,timestamp:timestamp}
