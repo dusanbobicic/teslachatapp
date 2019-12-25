@@ -21,7 +21,7 @@ exports.add_message = (req, res) => {
     if (!req.body.username) {
         return res.status(400).send({
             success: false,
-            message: 'user is required'
+            message: 'username is required'
         });
     }
     if (!req.body.message) {
@@ -37,14 +37,17 @@ exports.add_message = (req, res) => {
         });
     }
     let data = fs.readFileSync(MESSAGES_FILE_NAME);
+    let dataUsers=fs.readFileSync(USER_FILE_NAME);
+    let users=JSON.parse(dataUsers);
     let messages = JSON.parse(data);
     let username = req.body.username;
     let message = req.body.message;
     let topic_id=req.body.topic_id;
-    
+    let user_id=users.find(x=>x.username==username);
     let timestamp=Date.now();
     let id=uuidv4();
-    messages.push({message_id:id,username:username,topic_id:topic_id,message:message,timestamp:timestamp})
+    let obj={message_id:id,user_id:user_id,username:username,topic_id:topic_id,message:message,timestamp:timestamp}
+    messages.push(obj)
     //todos[obj].items.push(title);
     //console.log(todos);
     fs.writeFile(MESSAGES_FILE_NAME, JSON.stringify(messages), 'utf8',()=>{
@@ -53,7 +56,8 @@ exports.add_message = (req, res) => {
     console.log(`User ${username} updates`);
     res.status(200).send({
         success: true,
-        message: 'Message added Succesfully'
+        message: 'Message added Succesfully',
+        message_data:obj
 
     });
 }
