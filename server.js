@@ -63,6 +63,12 @@ router.post('/forum/users',forum.logIn);
 router.get('/forum/users',forum.getUsers);
 
 
+router.put('/users',forum.register);
+router.get('/users/:userId',forum.getUserInfo);
+router.post('/users',forum.logIn);
+router.get('/users',forum.getUsers);
+
+
 router.get('/forum/message',forum.get_all_messages);
 router.get('/forum/message/:topic_id',forum.get_message);
 router.put('/forum/message',forum.add_message);

@@ -1,9 +1,10 @@
 const fs = require('fs');
+const jwt = require('jsonwebtoken')
 const USER_FILE_NAME = 'users.json';
 const MESSAGES_FILE_NAME = 'messages.json';
 const TOPICS_FILE_NAME = 'topics.json';
 const uuidv4 = require('uuid/v4');
-
+const JWT_SECRET='A7zsiOll4PRnY5kxMAuRQAU8tdhbQ-mX7I_3E1ie59vaKY6WkRQkVMC7CtY4a-6sSA-Kok1vOgovDvalXKAJ7FAntun5ME2W1bdK0ntoUkvQSDwi6L81xGkMfiShgz3PjKC0b6xeXOa_iUAiiqsXYBX7lVLMQ69DNI_XO63TP8-9hunpAGyI7TaXtnoBUW5mM-zxIw1RgUV3ZL6NRmEfI-Mbxo8UhyOuUMnfkXTyUdx7Y7Ube5hsN6inzwkWmocxl_g3vz3p1Z_rUP-2rbw5e7Y7YLCqRw2oHeUl8I2fhIVdZqwl4_AaGVDPYJGmRNLtN77RKzC4lMCtQYwzKn8AVA';
 
 //----------------MESSAGES-------------
 exports.get_all_messages = (req, res) => {
@@ -222,7 +223,7 @@ exports.logIn = (req, res) => {
             picture: exist.picture,
             username: exist.username,
         }
-        res.status(200).send({ success: true, user: res_user });
+        res.status(200).send({ success: true, user: res_user ,token:jwt.sign({res_user},JWT_SECRET,{ expiresIn: 1 * 3600 })});
     } else {
         res.status(401).send({ success: false, message: 'Bad login!' });
     }
